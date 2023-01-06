@@ -1,4 +1,5 @@
 function treeBuilder(n) {
+	const whitespace = '';
 	if (Number.isInteger(n) && n > 0) {
 		const tree = [];
 		let stars = 1;
