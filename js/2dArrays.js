@@ -1,5 +1,6 @@
 const treeBuilder = (n) => {
 	const coreArr = [];
+	const whiteSpace = ' ';
 	const star = '*';
 	let stars = 1;
 	if (!Number.isInteger(n) && n > 0) {
@@ -8,7 +9,7 @@ const treeBuilder = (n) => {
 	} else {
 		for (let i = 1; i <= n; i++) {
 			const newTreeBranch = new Array(stars).fill(star).join('');
-			let space = ' '.repeat(n - (i - 1));
+			let space = whiteSpace.repeat(n - (i - 1));
 			coreArr.push(space + newTreeBranch);
 			stars = i >= 1 ? stars + 2 : stars;
 		}
